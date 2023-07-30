@@ -15,7 +15,9 @@ import java.util.PriorityQueue;
 import java.util.Iterator;
 
 
+
 public class Main {
+    public static final String FILE = "WinnedToys.txt";
     // Метод для приобретения призовой игрушки со склада
     public static void getToy(ArrayList<Toy> chosenToys) {
         try {
@@ -28,7 +30,7 @@ public class Main {
             Toy winnedToy = chosenToys.get(lastIndex);
             chosenToys.remove(lastIndex);
     
-            try (FileWriter fw = new FileWriter("WinnedToys.txt", true)) {
+            try (FileWriter fw = new FileWriter(FILE, true)) {
                 fw.append(winnedToy.toString());
                 fw.flush();
             } catch (IOException e) {
