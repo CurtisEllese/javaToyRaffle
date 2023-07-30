@@ -26,10 +26,8 @@ public class Main {
                 return;
             }
         
-            int lastIndex = chosenToys.size() - 1;
-            Toy winnedToy = chosenToys.get(lastIndex);
-            chosenToys.remove(lastIndex);
-    
+            Toy winnedToy = chosenToys.remove(chosenToys.size() - 1);
+            
             try (FileWriter fw = new FileWriter(FILE, true)) {
                 fw.append(winnedToy.toString());
                 fw.flush();
@@ -84,7 +82,7 @@ public class Main {
         }
 
         // Получаем игрушку и записываем ее в файл
-        for (int i = chosenToysList.size(); i > 0; i--) {
+        for (int i = 0; i < 10; i++) {
             getToy(chosenToysList);
         }
 
