@@ -23,7 +23,7 @@ public class Main {
                 System.out.println("No toys left in the list.");
                 return;
             }
-            
+        
             int lastIndex = chosenToys.size() - 1;
             Toy winnedToy = chosenToys.get(lastIndex);
             chosenToys.remove(lastIndex);
@@ -81,6 +81,7 @@ public class Main {
             chosenToysList.add(toy);
         }
 
+        // Получаем игрушку и записываем ее в файл
         for (int i = chosenToysList.size(); i > 0; i--) {
             getToy(chosenToysList);
         }
